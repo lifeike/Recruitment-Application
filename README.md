@@ -1,11 +1,7 @@
 # 简招 (React+Node+MongoDB)
 
-> 开始制作的时间是从 2020-10-10 起至 2020-11-06
-
-
-自己也发布过几个小型的demo,虽然没人看๑•ૅૄ•๑), 但还是喜欢与大家共同学习进步
-
-测试网址 --------->  [网址](http://shtodream.cn:9093)(目前bug,注册之后请重新登录方可聊天)
+> start date: 2020-10-10 
+> end date: 2020-11-06
 
 <p align="center" style="margin:50px 0;">
 	<img src="https://img.shields.io/badge/language-html%20%7C%20javascript-blue" />
@@ -18,34 +14,7 @@
 
 ### 介绍
 
-校园招聘`APP`,是一款手机端的求职网站,招聘者可以注册为BOSS,求职者可以注册为牛人,牛人和BOSS可以聊天,并且可以互相查看到对方的基本信息和简介薪资等方面
-
-计划制作:
-
-- 使用React的`Antd-mobile`支持手机端端制作 √
-- `ReactNative`独立开发`App`端和`IOS` ×
-- 有人肯定会很好奇,PC和手机为何要制作两次,主要是本人很萌新,想要学习更多的框架 ×
-
-> 只有学习更多的框架,并且锻炼更好的自学能力,才能更上一层楼
-
-### **关于我**
-
-我是一个__热门计算机__并且__对计算机充满兴趣__的程序员
-
-学过`Java`,`.net`,`PHP`,曾经一度认为`PHP`是最牛逼的语言
-
-后来正式的接触前端,学习过
-
-- `ES6`
-- `Node`
-- `React`
-- `Vue`
-- `ReactNative`
-- `Angular`
-- 微信一系列开发
-- `jq`,`bootstarp`等一些简单库
-
-发现前端很神奇,比后台和数据方面更加的有意思,想要称为一名前端工程师
+Campus Recruitment APP is a mobile job search website. Recruiters can register as BOSS, job seekers can register as pro, Pros and BOSS can chat, and can view each other's basic information and profile salary
 
 ### 项目简述
 
