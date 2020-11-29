@@ -16,32 +16,13 @@
 
 Campus Recruitment APP is a mobile job search website. Recruiters can register as BOSS, job seekers can register as pro, Pros and BOSS can chat, and can view each other's basic information and profile salary
 
-### 项目简述
+*=============package explained===============*
 
-> 这是一个Reacts项目,你的电脑要具备Node(8.0)以上
-#### 所使用的node包技术阐述
+* **(load on demand)** `babel-plugin-import`
 
-![sh](https://studyit.club/Study/Snipaste_2019-10-24_11-25-04.png)
+* **(cross domain)** `package.json` in `proxy`
 
-> 前端主要采用了React全家桶，没什么多说的，脚手架构建项目，react-router控制路由，axios进行前后端交互。后端是基于node搭的服务，用的是express。我为什么不用koa呢，纯粹是图方便，因为koa不熟（捂脸）。聊天最重要的当然是通信，项目用[socket.io](https://www.w3cschool.cn/socket/socket-1olq2egc.html)来进行前后端通信。
-
-
-
-*=============分割线  下面是每个包的详细解释===============*
-
-
-
-* **(按需加载问题)** 使用`babel-plugin-import`包
-
-* **(由于跨域问题)** 在`package.json`中使用`proxy`配置
-
-  * 需要详细说明一下,安装完这个包,需要在`package.json`文件中配置
-
-  * ```js
-    "proxy": "http://localhost:9093"
-    ```
-
-* **(关于密码加密问题)** 使用`utility`包
+* **(password encryption)** `utility`
 
 * **(关于cookie存储方面的问题)** 使用`browser-cookies`包
 
