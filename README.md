@@ -24,67 +24,36 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 * **(password encryption)** `utility`
 
-* **(关于cookie存储方面的问题)** 使用`browser-cookies`包
+* **(cookie storage)** `browser-cookies`
 
-* **(方面node中获取请求的数据)** 使用`body-parser`包
+* **(node request data)** `body-parser`
 
-* **(在React中发送请求)** 使用`axios`包
+* **(React send request)** `axios`
 
-* **(加强react中组件之间的通信类型)** 使用`prop-types`包
+* **(react components communication type)** `prop-types`
 
-* **(React和Redux之间的数据通信)** 使用`react-redux`包
+* **(React and Redux data communication)** `react-redux`
 
-* **(React中的路由配置)** 使用`react-router`包
+* **(React router config)** `react-router`
 
-* **(React中的动画)** 使用`rc-queue-anim`包
+* **(React animation)** `rc-queue-anim`
 
-* **(关于Redux的装饰器)**使用`babel-plugin-transform-decorators-legacy`包
+* **( about Redux decorator)**`babel-plugin-transform-decorators-legacy`
 
-  * 这里需要详细说明一下,安装完这个包之后,需要在`package.json`文件中中babel上加入
-
-  * `"plugins": ["transform-decorators-legacy"]`
-
-  * ```json
-    "babel": {
-        "presets": [
-            "react-app"
-        ],
-        "plugins": [
-            "transform-decorators-legacy"
-        ]
-    },
-    ```
-  
-* **(配置服务端渲染)** 使用`babel-cli`包
-
-  * 安装
-
-  * ```js
-    npm install babel-cli --save 
-    ```
-
-  * 配置package.json
-
-  * ```js
-    "server": "set NODE_ENV=test&&nodemon --exec babel-node -- server/main.js"
-    ```
-
-
-
-* 目录结构
+* file structure
 
 ```js
-    // 项目结构
+    // project structure
     ├─build
     ├─config
     ├─data
-    │  ├─MongoDB            				  // 数据库解释    
-    ├─server  								  // 后台
-    │  ├─model          					  // 数据库原型     
-    │  ├─main          				  		  // 后台文件入口  
-    │  ├─user          				 		  // 后台接口api    
+    │  ├─MongoDB            				  // DB    
+    ├─server  								  // back-end
+    │  ├─model          					  // data-model
+    │  ├─main          				  		  // back-end entry
+    │  ├─user          				 		  // back-end api    
     ├─src
-    │  ├─components                           // 全局组件
+    │  ├─components                           // global components
     │  │  ├─autoRouter
     │  │  ├─avatar-select
     │  │  ├─boss
@@ -98,15 +67,15 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
     │  │  ├─shForm
     │  │  ├─user
     │  │  └─chatCard
-    │  ├─router                                // 路由
-    │  ├─index                                 // 入口	
-    │  ├─util                                  // 方法
-    │  ├─config                                // 请求拦截
+    │  ├─router                                // router
+    │  ├─index                                 // entry
+    │  ├─util                                  // methods
+    │  ├─config                                // request interception
     │  └─container
-    │      ├─bossinfo   					   // boss
-    │      ├─login          				   // 登录
-    │      ├─register                          // 注册
-    │      └─genuisinfo                        // 牛人
+    │      ├─bossinfo   					   
+    │      ├─login          				   
+    │      ├─register                          
+    │      └─genuisinfo                      
 
 ```
 
@@ -176,30 +145,6 @@ axios.interceptors.response.use(function(config){
 
 
 
-* 登录和注册效果展示
-
-![sh](https://studyit.club/Study/register.gif)
-
-* 双方聊天展示
-
-![sh](https://studyit.club/Study/chat.gif)
-
-
-
-* 消息的更新和排序
-
-![sh](https://studyit.club/Study/clear.gif)
-
-
-
-* 手机端表情包展示
-
-![sh](https://studyit.club/Study/Screenshot_2019-10-24-14-14-39-53_cb819d8fa60af39.jpg)
-
-> 手机端的表情包就是可以用的,现在的表情包都可以直接使用了,不同代码了,很神奇
-
-
-
 ### 后台方向
 
 - 由于本人主要是面向前端,数据库就是`MongoDB`
@@ -234,13 +179,3 @@ axios.interceptors.response.use(function(config){
   npm run start //启动  打开浏览器输入localhost:3000
   ```
 
-
-如果还有bug和建议,欢迎告诉我  (͏ ˉ ꈊ ˉ)✧˖°
-
-![sh](https://studyit.club/Study/qq.jpg)
-
-
-
->  一开始还是遇到了很多的坑,第一次使用antd-mobile这个库,最主要的坑,还是对于项目的上线运行,毕竟个人不太擅长服务器的使用,在配置Nginx的时候卡了很久,为了性能优化,SSR渲染也是花了很大的心血,感觉里面的坑太多了,总的来说收获还是很大的,后期我还会画时间进行界面上的美化
->
-> 感觉支持  喜欢的朋友记得给个star  
