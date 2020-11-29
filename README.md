@@ -1,4 +1,4 @@
-# 简招 (React+Node+MongoDB)
+# recruit-easz (React+Node+MongoDB)
 
 > start date: 2020-10-10 
 > end date: 2020-11-06
@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/weibo-%40SH-blueviolet"  />
 </p>
 
-### 介绍
+### intro
 
 Campus Recruitment APP is a mobile job search website. Recruiters can register as BOSS, job seekers can register as pro, Pros and BOSS can chat, and can view each other's basic information and profile salary
 
@@ -40,7 +40,7 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 * **( about Redux decorator)**`babel-plugin-transform-decorators-legacy`
 
-* file structure
+*=============file structure===============*
 
 ```js
     // project structure
@@ -79,103 +79,36 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 ```
 
-
-
-> 注册时, 进行密码MD5加密
-
-
-
-``` js
-// md5加密
-function md5pwd(pwd){
-    const salt = 'qwe123~~-!@#$%^&&*()sunhang'
-    return utility.md5(utility.md5(salt+pwd))
-}
-```
-
-
-
-> 进行登录以及cookie的存储
-
-
-
-```js
-//进行注册
-Router.post('/register',(req,res)=>{
-    const { user,pwd,type } = req.body
-    User.findOne({user},(err,doc)=>{
-        if(doc){
-            return res.json({code:1,msg:'用户名存在'})
-        }
-        const userModel = new User({user,type,pwd:md5pwd(pwd)})
-        userModel.save(function(e,d){
-            if(err){
-                return res.json({code:2,msg:'后端出错了'})
-            }
-            const {user,type,_id} = d
-            res.cookie('userid',_id)
-            return res.json({code:3,msg:'注册成功',data:{user,type,_id}})
-        })
-    })
-})
-```
-
-
-
-> axios拦截器的制作
-
-
-
-```js
-import axios from 'axios'
-import { Toast } from 'antd-mobile'
-
-//拦截请求
-axios.interceptors.request.use(function(config){
-    Toast.loading('加载中',0);
-    return config;
-})
-
-//拦截响应
-axios.interceptors.response.use(function(config){
-    Toast.hide();
-    return config;
-})
-```
-
-
-
 ### 后台方向
 
-- 由于本人主要是面向前端,数据库就是`MongoDB`
-- 数据库的使用请参照`data`目录下面的`mongodb.md`
-* 数据库方面使用 **(mongoose)**
+- `MongoDB`
+- database useage please refer `mongodb.md` under `data` folder
+* database: **(mongoose)**
 
-- 后台主要使用`node`的`express`
+- back-end: `node`+`express`
 
-* 后台文件在`server`
+* back-end files: `server` folder
 
 
 
-# 使用方式
+# usage
 
-* 需要电脑有 mongo 和 react 还有node环境
-
-* 首先:下载本项目
+* mongo + react + node 8.0+
 
 * ```js
-  // 第一种方式
-  npm install //安装包依赖
-  npm run build //打包项目
-  npm run server //启动  打开浏览器输入localhost:9093
+  // option 1
+  npm install 
+  npm run build 
+  npm run server 
+  localhost:9093
   ```
 
 * ```js
-  // 第二种方式
-  npm install //安装包依赖
-  cd server  //进入后台
-  node main.js  //运行后台
-  //再打开一个cmd
-  npm run start //启动  打开浏览器输入localhost:3000
+  // option 2
+  npm install 
+  cd server
+  node main.js
+  npm run start
+  localhost:3000
   ```
 
