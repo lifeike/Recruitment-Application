@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/weibo-%40SH-blueviolet"  />
 </p>
 
-### intro
+### Intro
 
 Campus Recruitment APP is a mobile job search website. Recruiters can register as BOSS, job seekers can register as pro, Pros and BOSS can chat, and can view each other's basic information and profile salary
 
@@ -79,7 +79,7 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 ```
 
-### 后台方向
+### Back-end
 
 - `MongoDB`
 - database useage please refer `mongodb.md` under `data` folder
@@ -91,7 +91,7 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 
 
-# usage
+# Usage
 
 * mongo + react + node 8.0+
 
