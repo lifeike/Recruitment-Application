@@ -93,7 +93,7 @@ Campus Recruitment APP is a mobile job search website. Recruiters can register a
 
 # Usage
 
-* mongo + react + node 8.0+
+* mongo + react + node + express
 
 * ```js
   // option 1
